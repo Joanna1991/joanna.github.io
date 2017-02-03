@@ -1,27 +1,124 @@
 * {
   box-sizing: border-box;
 }
-/*
+
 html {
-  background-image: white;
+  background: url(/Users/joanna/Sites/joanna.github.io/storona/images/nowetlo2.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
-*/
-html {
-  background: url(/Users/joanna/Sites/joanna.github.io/storona/nowetlo2.png) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  margin-top: 0;
+  height: 10%;
+  margin-left: 10px;
+
 }
 
 body {
+  margin-top: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  color: none;
   margin: 0;
   padding: 60px 60px;
 }
+
+/* experyment with cosmos*/
+
+
+html::before,
+html::after,
+body::before,
+body::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: .4vmin;
+  height: .4vmin;
+  border-radius: 10%;
+}
+
+h1 {
+  margin-top: 500px;
+  height: 10vmin;
+  width: 120vmin;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+h1:before {
+
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: -26vmin;
+  left: 29vmin;
+  width: 62vmin;
+  height: 62vmin;
+  border-radius: 50%;
+  /*border: 1.3vmin solid currentColor;*/
+  box-sizing: border-box;
+}
+
+em {
+  font-family: 'Minion Pro', serif;
+  color: blue;
+  font-size: 10vmin;
+  position: relative;
+  font-style: italic;
+  width: 15vmin;
+  text-align: center;
+}
+
+em.planet {
+  -webkit-animation: planet-rotate 4s linear infinite;
+  animation: planet-rotate 4s linear infinite;
+  position: relative;
+}
+
+em.planet::before {
+  content: "";
+  position: absolute;
+  top: -.5vmin;
+  left: 3.5vmin;
+  z-index: -1;
+  width: 10vmin;
+  height: 10vmin;
+  border-radius: 50%;
+  background: blue;
+}
+
+em.planet.left {
+  -webkit-transform-origin: 40vmin 5vmin;
+  transform-origin: 40vmin 5vmin;
+}
+
+em.planet.right {
+  -webkit-transform-origin: -20vmin 5vmin;
+  transform-origin: -20vmin 5vmin;
+}
+
+@-webkit-keyframes planet-rotate {
+  to {
+    -webkit-transform: rotate(1turn);
+  }
+}
+
+@keyframes planet-rotate {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+/* end of experyment*/
+
+
+/*
 
 .header {
   background-color: none;
@@ -30,11 +127,9 @@ body {
   position: fixed;
   top: 210px;
   left: 0px;
-  z-index: 1000;
-
 
 }
-
+*/
 .header1 {
   background-color: none;
   overflow-y: auto;
@@ -42,7 +137,6 @@ body {
   position: fixed;
   top: -20px;
   left: 0px;
-  z-index: 1000;
 
 }
 
@@ -54,20 +148,20 @@ ul {
 }
 
 li {
-  color: black;
+  color: blue;
   display: inline-block;
-  font-family: 'quicksand', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   font-size: 18px;
+  font-style: italic;
   text-align: left;
   font-weight: 400;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   padding: 40px;
 
 }
 
 img {
 width: 100%;
-display: block;
 height: auto;
 
 }
@@ -78,18 +172,17 @@ li:hover {
 
 a {
   text-decoration: none !important;
-  color: black;
+  color:  blue;
 }
 
 a:hover {
-    color: red;
+    color: rgb(255, 57, 248);
     text-decoration: none;
 }
 
 
 
-
-.box {
+/*.box {
 
 float: left;
 margin: auto;
@@ -100,7 +193,7 @@ padding: 4px;
 background: #eee;
 text-align: center;
 
-}
+}*/
 
 
 .grow img {
@@ -118,58 +211,89 @@ text-align: center;
   -webkit-transform: scale(1.2);
 }
 
-
+/*footer*/
 .container {
 font-size: 12px;
-font-family: 'quicksand';
+font-family: 'Quicksand';
+font-style: italic;
 right: 0;
 bottom: 0;
 left: 0;
 padding: 1rem;
-background-color: none;
+background-color: white;
 text-align: center;
 position: fixed;
+color: blue;
 }
 
-.joanna {
+/*contact*/
+.joanna{
+padding-top: 300px !important;
 text-align: center !important;
 margin-top: 210px !important;
 font-family: 'quicksand';
 color: blue;
 }
 
+
+
 .logo {
-  top: 15px;
-  left: 15px;
-  width:4em;
-  height:4em;
-  position: fixed;
-
+top: 10px;
+left: 30px;
+position: fixed;
+width: 100px;
 }
 
-/* illustrations*/
-
-.placz {
-width: calc(100% - 16px);
-padding: 70px;
-}
-
-/*portfolio menu */
 
 .menuportfolio {
 float: left;
 display: inline;
 width: 33.33%;
 margin-top: 90px;
-padding: 10px;
-
-
+padding: 20px;
 
 }
 
 .allmenuportfolio {
+  margin-top: 400px;
   margin-left: auto;
   margin-right: auto;
-  width: 1100px;
+  width: 1050px;
 
 }
+
+
+.content {
+  text-align: center;
+  height: auto;
+  margin-top: 1300px;
+  margin-bottom: 60px;
+  float: none;
+  clear: both;
+}
+
+.picture {
+padding-left: 200px;
+padding-right: 200px;
+margin: 20px;
+}
+
+.illu {
+margin-top: 200px;
+
+
+}
+
+/*hover*/
+
+/*.bw {
+  -webkit-transition: all 0.05s ease;
+     -moz-transition: all 0.05s ease;
+       -o-transition: all 0.05s ease;
+      -ms-transition: all 0.05s ease;
+          transition: all 0.05s ease;
+}
+
+.bw:hover {
+  -webkit-filter: saturate(9.2);
+}*/
