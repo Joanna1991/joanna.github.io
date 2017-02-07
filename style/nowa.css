@@ -3,7 +3,7 @@
 }
 
 html {
-  background: url(/Users/joanna/Sites/joanna.github.io/storona/images/tlo.svg) no-repeat center fixed;
+  background: url('../images/tlo.svg') no-repeat center fixed;
   height: 100%;
 }
 
